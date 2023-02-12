@@ -53,7 +53,7 @@ export default function Card({ movieData }) {
               <div className="genres flex">
                 <ul className="flex">
                   {movieData.genres.map((genre) => (
-                    <li>{genre}</li>
+                    <li key={genre.id}>{genre}</li>
                   ))}
                 </ul>
               </div>

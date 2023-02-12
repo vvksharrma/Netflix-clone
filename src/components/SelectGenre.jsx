@@ -5,7 +5,6 @@ import { fetchDataByGenre } from '../store';
 
 
 export default function SelectGenre({ genres, type }) {
-
   const dispatch = useDispatch()
   return (
     <Select
@@ -20,6 +19,7 @@ export default function SelectGenre({ genres, type }) {
         );
       }}>
       {
+
         genres.map((genre) => {
           return (
             <option value={genre.id} key={genre.id}>

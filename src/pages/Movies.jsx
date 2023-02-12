@@ -35,7 +35,6 @@ export default function Movies() {
     setIsScrolled(window.pageYOffset === 0 ? false : true);
     return () => (window.onscroll = null);
   };
-  console.log(movies)
 
   onAuthStateChanged(firebaseAuth,(currentUser)=>{
     // if(!currentUser) navigate("/login");
