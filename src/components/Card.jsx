@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
@@ -15,6 +15,10 @@ export default function Card({ movieData }) {
   const [isHover, setIsHover] = useState(false);
   const navigate = useNavigate()
 
+
+  useEffect(()=>{
+    setIsLiked(false)
+  },[isLiked])
   return (
     <Container onMouseEnter={() =>setIsHover(true) } onMouseLeave={() => setIsHover(false)}>
       <img src={`https://image.tmdb.org/t/p/w500${movieData.image}`}

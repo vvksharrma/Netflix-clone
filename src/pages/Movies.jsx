@@ -19,8 +19,8 @@ export default function Movies() {
   const genres = useSelector((state) => state.netflix.genres);
   const genresLoaded = useSelector((state) => state.netflix.genresLoaded);
 
-  const navigate = useNavigate();
   const dispatch = useDispatch();
+  const navigate = useNavigate()
   
   useEffect(()=>{
     dispatch(getGenres());
@@ -37,7 +37,7 @@ export default function Movies() {
   };
 
   onAuthStateChanged(firebaseAuth,(currentUser)=>{
-    // if(!currentUser) navigate("/login");
+    if(!currentUser) navigate("/login");
   })
   return (
     <Container>
