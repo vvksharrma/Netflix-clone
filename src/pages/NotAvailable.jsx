@@ -3,7 +3,10 @@ import styled from'styled-components'
 
 export default function NotAvailable() {
   return (
-    <div className="not-available">Sorry no video available for this :/ </div>
+    <Container>
+
+      <div className="not-available">Sorry no video available for this :/ </div>
+    </Container>
   )
 }
 
